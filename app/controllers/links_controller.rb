@@ -24,4 +24,18 @@ class LinksController < ApplicationController
   	@link = Link.find(params[:id])
   	render('links/show.html.erb')
   end
+
+  def edit
+  	@link = Link.find(params[:id])
+  	render('links/edit.html.erb')
+  end
+
+  def update
+  	@link = Link.find(params[:id])
+  	if @link.update(params[:link])
+  		redirect_to("/links/#{@link.id}")
+  	else
+  		render('links/edit.html.erb')
+  	end
+  end
 end
