@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: link_list_development
+
+test:
+  adapter: postgresql
+  database: link_list_test
