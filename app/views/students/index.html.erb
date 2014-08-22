@@ -1,0 +1,14 @@
+<h1>Students</h1>
+
+
+
+
+<p>Click on each students's name to see all of the links they have contributed:</p>
+<ul>
+  <% @students.each do |student| %>
+    <li><a href="/students/<%= student.id %>"> <%= student.name %></a></li>
+  <% end %>
+</ul>
+
+
+<h3><a href="/students/new">Create a New Student</a></h3>
