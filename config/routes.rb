@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   match('/students', {:via => :get, :to => 'students#index'})
   match('/students', {:via => :post, :to => 'students#create'})
   match('/students/new', {:via => :get, :to => 'students#new'})
+  match('/students/:id', {:via => :get, :to => 'students#show'})
 
 end

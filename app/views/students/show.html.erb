@@ -1,25 +1,18 @@
-<h1>New Link</h1>
 
-<% if @link.errors.any? %>
-  <h3>Please fix these errors:</h3>
-  <ul>
-    <% @link.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<h1><%= @student.name %></h1>
 
-<form action="/links" method="post">
-  <label for="link_name">Name the Link</label>
-  <input id="link_name" name="link[name]" type="text" value="<%= @link.name %>">
-  <label for="link_url">Enter the URL for this link</label>
-  <input id="link_url" name="link[url]" type="text" value="<%= @link.url %>">
-  <br>
-  <label for="link_description">Describe why this link would be useful for your classmates</label>
-  <br>
-  <textarea id="link_description" name="link[description]" rows='5' cols='35' type="text" value="<%= @link.description %>"></textarea>
-  <button>Create Link</button>
-</form>
+<h4>Here are all the links that <%= @student.name %> has added:</h4>
+<p><%= @error %></p>
+<ul>
+  <% @student.links.each do |link| %>
+    <li><a href="/links/<%= link.id %>"> <%= link.name %></a></li>
+  <% end %>
+</ul>
 
+<p><a href="/students/<%= @student.id %>/edit">Update this student's name</a></p>
+<p><a href="/students/<%= @student.id %>"
+      data-confirm="Are you sure you want to delete this student?"
+      data-method="delete"
+      rel='nofollow'>Delete this student</a></p>
 
-<p><a href="/">Return to Links Page</a></p>
+<p><a href="/">Return to Student's Page</a></p>

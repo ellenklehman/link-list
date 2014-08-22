@@ -18,4 +18,12 @@ class StudentsController < ApplicationController
 			render('/students/new.html.erb')
 		end
 	end
+
+	def show
+		@student = Student.find(params[:id])
+		if @student.links.empty?
+			@error = "There are no links added yet."
+		end
+		render('/students/show.html.erb')
+	end
 end
