@@ -38,4 +38,10 @@ class LinksController < ApplicationController
   		render('links/edit.html.erb')
   	end
   end
+
+  def destroy
+  	@link = Link.find(params[:id])
+  	@link.destroy
+  	redirect_to('/')
+  end
 end

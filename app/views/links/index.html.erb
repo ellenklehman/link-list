@@ -4,6 +4,6 @@
 <h4>All Links:</h4>
 <ul>
   <% @links.each do |link| %>
-    <li>NAME: <%= link.name %> <br> URL: <%= link.url %></li>
+    <li><a href="/links/<%= link.id %>"> NAME: <%= link.name %> <br> URL: <%= link.url %></a></li>
   <% end %>
 </ul>
