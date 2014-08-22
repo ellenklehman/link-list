@@ -1,0 +1,22 @@
+<h1>New Link</h1>
+
+<% if @link.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @link.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<form action="/links" method="post">
+  <label for="link_name">Name the Link</label>
+  <input id="link_name" name="link[name]" type="text" value="<%= @link.name %>">
+  <label for="link_url">Enter the URL for this link</label>
+  <input id="link_url" name="link[url]" type="text" value="<%= @link.url %>">
+  <br>
+  <label for="link_description">Describe why this link would be useful for your classmates</label>
+  <br>
+  <textarea id="link_description" name="link[description]" rows='5' cols='35' type="text" value="<%= @link.description %>"></textarea>
+  <button>Create Link</button>
+</form>
