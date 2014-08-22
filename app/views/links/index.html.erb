@@ -2,9 +2,11 @@
 
 
 <h4>All Links:</h4>
+
+<p>Click on each link's name to see the description of why this link is a good resource</p>
 <ul>
   <% @links.each do |link| %>
-    <li><a href="/links/<%= link.id %>"> NAME: <%= link.name %> <br> URL: <%= link.url %></a></li>
+    <li><a href="/links/<%= link.id %>"> <%= link.name %></a></li>
   <% end %>
 </ul>
 
