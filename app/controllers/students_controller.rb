@@ -37,7 +37,13 @@ class StudentsController < ApplicationController
 		if @student.update(params[:student])
 			redirect_to("/students/#{@student.id}")
 		else
-			render('students/edit.html.erb')
+			render('/students/edit.html.erb')
 		end
+	end
+
+	def destroy
+		@student = Student.find(params[:id])
+		@student.destroy
+		redirect_to('/students')
 	end
 end
