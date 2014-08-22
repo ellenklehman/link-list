@@ -26,4 +26,18 @@ class StudentsController < ApplicationController
 		end
 		render('/students/show.html.erb')
 	end
+
+	def edit
+		@student = Student.find(params[:id])
+		render('/students/edit.html.erb')
+	end
+
+	def update
+		@student = Student.find(params[:id])
+		if @student.update(params[:student])
+			redirect_to("/students/#{@student.id}")
+		else
+			render('students/edit.html.erb')
+		end
+	end
 end
