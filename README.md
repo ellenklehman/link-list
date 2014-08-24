@@ -3,7 +3,7 @@
 ###By Ellen Lehman
 
 ##Set Up
-To set up this program, clone the repository from Github.  To set up the database on your computer, run rake db:schema:load. You can run the program locally by using http://localhost:3000/ or you can find it online at:__________________________________.
+To set up this program, clone the repository from Github.  To set up the database on your computer, run rake db:schema:load and make sure to run the rails server. You can run the program locally by using http://localhost:3000/ or you can find it online at:__________________________________.
 
 
 ##What It Does
