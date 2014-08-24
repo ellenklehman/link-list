@@ -1,18 +1,12 @@
 <h1>New Student</h1>
 
 
-<% if @student.errors.any? %>
-  <h3>Please fix these errors:</h3>
-  <ul>
-    <% @student.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render('layouts/errors', :object => @student) %>
 
 <form action="/students" method="post">
-  <label for="student_name">What is your first and last name?</label>
-  <input id="student_name" name="student[name]" type="text" value="<%= @student.name %>">
+
+	<%= render('form') %>
+
   <button>Create your Profile</button>
 </form>
 
