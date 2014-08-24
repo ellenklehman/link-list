@@ -13,7 +13,8 @@ This program allows a teacher to help his/her students discover great resources 
 At this time, the teachers cannot add multiple classes or prevent students from editing their classmates' resource links.  Ideally in the future, this web application would allow students to upvote or downvote students links based on their usefullness/validity, provided they include an explanation of their vote.
 
 ##Schema of the Database
-![image](https://cloud.githubusercontent.com/assets/8159813/4024306/1465b6a6-2bc2-11e4-9b43-cda166968adb.png)
+![screen shot 2014-08-24 at 12 08 14 pm](https://cloud.githubusercontent.com/assets/8159813/4024316/ae34b868-2bc2-11e4-8f2c-8f7e9f47ded7.png)
+
 
 
 
