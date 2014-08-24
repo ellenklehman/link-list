@@ -7,10 +7,14 @@ class LinksController < ApplicationController
 
   def new
   	@link = Link.new
+    @student = Student.new
+    @students = Student.all
   	render('links/new.html.erb')
   end
 
   def create
+    @student = Student.find_by(params[:student])
+    @students = Student.all
   	@link = Link.new(params[:link])
   	if @link.save
   		flash[:notice] = "Your link was successully created."
@@ -22,6 +26,7 @@ class LinksController < ApplicationController
 
   def show
   	@link = Link.find(params[:id])
+    @student = Student.find(@link.student_id)
   	render('links/show.html.erb')
   end
 

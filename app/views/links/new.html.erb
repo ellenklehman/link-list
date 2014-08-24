@@ -9,7 +9,12 @@
   </ul>
 <% end %>
 
-<form action="/links" method="post">
+<form id = "new_link" action="/links" method="post">
+  <select form="new_link" name="link[student_id]">
+    <% @students.each do |student| %>
+      <option value="<%= student.id %>"><%= student.name %></option>
+    <% end %>
+   </select>
   <label for="link_name">Name the Link</label>
   <input id="link_name" name="link[name]" type="text" value="<%= @link.name %>">
   <label for="link_url">Enter the URL for this link</label>
