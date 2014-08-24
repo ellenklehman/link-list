@@ -2,26 +2,29 @@
 
 <h1>Welcome to Link List!</h1>
 
-<p>Instructions for accurate use:</p>
-<ul>
-	<li>Create a <a href="/students">profile </a> by adding a name to the class list.</li>
-	<li>Fill out the link form whenever you come accross a webpage that you think would be helpful for your classmates to have access to.</li>
-	<li>**REMEMBER: Once you have created a profile, you don't have to create it again.**</li>
-</ul>
-
-<h3><a href="/students/new">Create a Profile</a></h3>
-
-<h4><a href="/students">See all Student Profiles</a></h4>
+<div class="col-md-6">
+	<p>Instructions for accurate use:</p>
+	<ul>
+		<li>Create a <a href="/students">profile </a> by adding a name to the class list.</li>
+		<li>Fill out the link form whenever you come accross a webpage that you think would be helpful for your classmates to have access to.</li>
+		<li>**REMEMBER: Once you have created a profile, you don't have to create it again.**</li>
+	</ul>
 
 
-<h4>All Links for this Class:</h4>
+	<h3><a href="/students/new">Create a Profile</a></h3>
 
-<p>Click on each link's name to see the description of why this link is a good resource</p>
-<ul>
-  <% @links.each do |link| %>
-    <li><a href="/links/<%= link.id %>"> <%= link.name %></a></li>
-  <% end %>
-</ul>
+	<h3><a href="/students">See all Student Profiles</a></h3>
 
+</div>
 
-<h3><a href="/links/new">Create a New Link</a></h3>
+<div class="col=md-6">
+	<h3>All Links for this Class:</h3>
+
+	<p>Click on each link's name to see the description of why this link is a good resource</p>
+	<ul>
+	  <% @links.each do |link| %>
+	    <li><a href="/links/<%= link.id %>"> <%= link.name %></a></li>
+	  <% end %>
+	</ul>
+	<h3><a href="/links/new">Create a New Link</a></h3>
+</div>

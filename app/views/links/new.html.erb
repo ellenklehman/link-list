@@ -4,17 +4,18 @@
 
 <%= render('layouts/errors', :object => @link) %>
 
+<br>
 <form id = "new_link" action="/links" method="post">
-  <select form="new_link" name="link[student_id]">
+  <select class="form-control" form="new_link" name="link[student_id]">
     <% @students.each do |student| %>
       <option value="<%= student.id %>"><%= student.name %></option>
     <% end %>
    </select>
 
   <%= render('form') %>
-
-  <button>Create Link</button>
+	<br>
+  <button class="btn btn-primary">Create Link</button>
 </form>
 
-
+<br>
 <p><a href="/">Return to Links Page</a></p>
